@@ -9,7 +9,7 @@ node {
    }
 
 stage("publish to s3") {
-	sh 'war published to s3'
+	sh 'echo war published to s3'
 }
 
 stage('Initiate prana deployment') {
