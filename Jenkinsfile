@@ -9,7 +9,23 @@ node {
    }
 
 stage("publish to s3") {
-	sh 'echo war published to s3'
+  step([
+        $class: 'S3BucketPublisher',
+        entries: [[
+            sourceFile: '**/*.war',
+            bucket: 'appranix-demo',
+            selectedRegion: 'us-east-1',
+            noUploadOnFailure: true,
+            managedArtifacts: true,
+            flatten: true,
+            showDirectlyInBrowser: true,
+            keepForever: true,
+        ]],
+        profileName: 'appranix-demo',
+        dontWaitForConcurrentBuildCompletion: false, 
+    ])
+   sh 'echo war published to s3'
+	
 }
 
 stage('Initiate prana deployment') {
