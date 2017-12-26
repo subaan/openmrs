@@ -832,7 +832,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
-					<failIfNoTests>false</failIfNoTests>
+					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -840,6 +840,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 			</plugin>
 		</plugins>
+
 	</build>
 
 	<profiles>
