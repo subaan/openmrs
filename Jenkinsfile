@@ -24,24 +24,24 @@ stage("publish to s3") {
         profileName: 'appranix-demo',
         dontWaitForConcurrentBuildCompletion: false, 
     ])
-   sh 'echo war published to s3'
+   sh 'echo War published to s3'
 	
 }
 
 stage('Initiate prana deployment') {
 
 
-       sh 'echo successfully logged in prana'
+       sh 'echo Successfully logged in prana'
 
-       sh 'echo organization is set as devorg'
+       sh 'echo Organization is set as devorg'
 
-       sh 'echo assembly is set as shopping-cart'
-
-       sh 'echo Transition variable update build ver'
+       sh 'echo Assembly is set as shopping-cart'
 
        sh 'echo Transition variable update build ver'
 
-       sh 'echo deployement is started'
+       sh 'echo Transition variable update build ver'
+
+       sh 'echo Deployement started'
       
    }
 }
